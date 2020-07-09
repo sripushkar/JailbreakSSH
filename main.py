@@ -4,6 +4,8 @@ import json
 
 client = paramiko.SSHClient()
 
+#Add in auto login feature here
+
 hostName = input("Host Name(IP Address of phone): ")
 username = input("Username: ")
 password = input("Password: ")
@@ -11,8 +13,9 @@ port = input("What is the port number? ")
 
 save = input("Save this data? Type yes or no: ")
 
-if save == yes:
+if save == "yes":
     info = {"host": hostName, "user": username, "pass": password, "port", port}
+    #Save this data to info.json
 
 
 client.load_system_host_keys()
